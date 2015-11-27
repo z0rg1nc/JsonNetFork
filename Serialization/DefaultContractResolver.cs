@@ -40,18 +40,18 @@ using System.Runtime.Serialization;
 using System.Security.Permissions;
 #endif
 using System.Xml.Serialization;
-using Newtonsoft.Json.Converters;
-using Newtonsoft.Json.Utilities;
-using Newtonsoft.Json.Linq;
+using BtmI2p.Newtonsoft.Json.Converters;
+using BtmI2p.Newtonsoft.Json.Utilities;
+using BtmI2p.Newtonsoft.Json.Linq;
 using System.Runtime.CompilerServices;
 #if NET20
-using Newtonsoft.Json.Utilities.LinqBridge;
+using BtmI2p.Newtonsoft.Json.Utilities.LinqBridge;
 #else
 using System.Linq;
 
 #endif
 
-namespace Newtonsoft.Json.Serialization
+namespace BtmI2p.Newtonsoft.Json.Serialization
 {
     internal struct ResolverContractKey : IEquatable<ResolverContractKey>
     {

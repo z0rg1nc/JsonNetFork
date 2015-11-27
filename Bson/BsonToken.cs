@@ -26,7 +26,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Newtonsoft.Json.Bson
+namespace BtmI2p.Newtonsoft.Json.Bson
 {
     internal abstract class BsonToken
     {

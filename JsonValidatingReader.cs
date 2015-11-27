@@ -28,20 +28,20 @@ using System.Collections.Generic;
 #if !(NET20 || NET35 || PORTABLE40 || PORTABLE)
 using System.Numerics;
 #endif
-using Newtonsoft.Json.Linq;
-using Newtonsoft.Json.Schema;
-using Newtonsoft.Json.Utilities;
+using BtmI2p.Newtonsoft.Json.Linq;
+using BtmI2p.Newtonsoft.Json.Schema;
+using BtmI2p.Newtonsoft.Json.Utilities;
 using System.Globalization;
 using System.Text.RegularExpressions;
 using System.IO;
 #if NET20
-using Newtonsoft.Json.Utilities.LinqBridge;
+using BtmI2p.Newtonsoft.Json.Utilities.LinqBridge;
 #else
 using System.Linq;
 
 #endif
 
-namespace Newtonsoft.Json
+namespace BtmI2p.Newtonsoft.Json
 {
     /// <summary>
     /// Represents a reader that provides <see cref="JsonSchema"/> validation.

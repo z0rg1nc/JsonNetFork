@@ -24,9 +24,9 @@
 #endregion
 
 using System;
-using Newtonsoft.Json.Utilities;
+using BtmI2p.Newtonsoft.Json.Utilities;
 
-namespace Newtonsoft.Json.Schema
+namespace BtmI2p.Newtonsoft.Json.Schema
 {
     /// <summary>
     /// Returns detailed information related to the <see cref="ValidationEventHandler"/>.

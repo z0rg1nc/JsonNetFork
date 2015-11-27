@@ -25,7 +25,7 @@
 
 using System.Collections.Generic;
 
-namespace Newtonsoft.Json.Schema
+namespace BtmI2p.Newtonsoft.Json.Schema
 {
     internal static class JsonSchemaConstants
     {

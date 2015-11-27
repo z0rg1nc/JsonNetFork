@@ -26,9 +26,9 @@
 using System;
 using System.Globalization;
 using System.Runtime.Serialization;
-using Newtonsoft.Json.Utilities;
+using BtmI2p.Newtonsoft.Json.Utilities;
 
-namespace Newtonsoft.Json
+namespace BtmI2p.Newtonsoft.Json
 {
     /// <summary>
     /// The exception thrown when an error occurs while reading Json text.

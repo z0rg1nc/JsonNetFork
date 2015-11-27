@@ -26,12 +26,12 @@
 using System;
 using System.Collections.Generic;
 #if NET20
-using Newtonsoft.Json.Utilities.LinqBridge;
+using BtmI2p.Newtonsoft.Json.Utilities.LinqBridge;
 #endif
 using System.Threading;
-using Newtonsoft.Json.Serialization;
+using BtmI2p.Newtonsoft.Json.Serialization;
 
-namespace Newtonsoft.Json.Utilities
+namespace BtmI2p.Newtonsoft.Json.Utilities
 {
     internal class ThreadSafeStore<TKey, TValue>
     {

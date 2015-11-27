@@ -23,7 +23,7 @@
 // OTHER DEALINGS IN THE SOFTWARE.
 #endregion
 
-namespace Newtonsoft.Json
+namespace BtmI2p.Newtonsoft.Json
 {
     /// <summary>
     /// Specifies how dates are formatted when writing JSON text.

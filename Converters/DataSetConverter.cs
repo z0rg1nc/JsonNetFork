@@ -26,9 +26,9 @@
 #if !(NETFX_CORE || PORTABLE40 || PORTABLE)
 using System;
 using System.Data;
-using Newtonsoft.Json.Serialization;
+using BtmI2p.Newtonsoft.Json.Serialization;
 
-namespace Newtonsoft.Json.Converters
+namespace BtmI2p.Newtonsoft.Json.Converters
 {
     /// <summary>
     /// Converts a <see cref="DataSet"/> to and from JSON.

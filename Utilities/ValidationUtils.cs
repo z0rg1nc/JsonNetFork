@@ -29,7 +29,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Globalization;
 
-namespace Newtonsoft.Json.Utilities
+namespace BtmI2p.Newtonsoft.Json.Utilities
 {
     internal static class ValidationUtils
     {

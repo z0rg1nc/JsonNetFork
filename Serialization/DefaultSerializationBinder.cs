@@ -27,9 +27,9 @@ using System;
 using System.Runtime.Serialization;
 using System.Reflection;
 using System.Globalization;
-using Newtonsoft.Json.Utilities;
+using BtmI2p.Newtonsoft.Json.Utilities;
 
-namespace Newtonsoft.Json.Serialization
+namespace BtmI2p.Newtonsoft.Json.Serialization
 {
     /// <summary>
     /// The default serialization binder used when resolving and loading classes from type names.

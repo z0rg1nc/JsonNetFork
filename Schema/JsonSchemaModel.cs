@@ -24,10 +24,10 @@
 #endregion
 
 using System.Collections.Generic;
-using Newtonsoft.Json.Linq;
-using Newtonsoft.Json.Utilities;
+using BtmI2p.Newtonsoft.Json.Linq;
+using BtmI2p.Newtonsoft.Json.Utilities;
 
-namespace Newtonsoft.Json.Schema
+namespace BtmI2p.Newtonsoft.Json.Schema
 {
     internal class JsonSchemaModel
     {

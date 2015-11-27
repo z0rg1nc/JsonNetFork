@@ -31,7 +31,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 
-namespace Newtonsoft.Json.Utilities
+namespace BtmI2p.Newtonsoft.Json.Utilities
 {
     internal class DynamicProxy<T>
     {

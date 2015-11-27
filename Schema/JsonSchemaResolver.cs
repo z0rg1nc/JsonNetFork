@@ -26,13 +26,13 @@
 using System;
 using System.Collections.Generic;
 #if NET20
-using Newtonsoft.Json.Utilities.LinqBridge;
+using BtmI2p.Newtonsoft.Json.Utilities.LinqBridge;
 #else
 using System.Linq;
 
 #endif
 
-namespace Newtonsoft.Json.Schema
+namespace BtmI2p.Newtonsoft.Json.Schema
 {
     /// <summary>
     /// Resolves <see cref="JsonSchema"/> from an id.

@@ -3,7 +3,7 @@ using System;
 using System.Diagnostics;
 using DiagnosticsTrace = System.Diagnostics.Trace;
 
-namespace Newtonsoft.Json.Serialization
+namespace BtmI2p.Newtonsoft.Json.Serialization
 {
     /// <summary>
     /// Represents a trace writer that writes to the application's <see cref="TraceListener"/> instances.
@@ -57,12 +57,12 @@ namespace Newtonsoft.Json.Serialization
                 {
                     lock (listener)
                     {
-                        listener.TraceEvent(eventCache, "Newtonsoft.Json", traceEventType, 0, message);
+                        listener.TraceEvent(eventCache, "BtmI2p.Newtonsoft.Json", traceEventType, 0, message);
                     }
                 }
                 else
                 {
-                    listener.TraceEvent(eventCache, "Newtonsoft.Json", traceEventType, 0, message);
+                    listener.TraceEvent(eventCache, "BtmI2p.Newtonsoft.Json", traceEventType, 0, message);
                 }
 
                 if (DiagnosticsTrace.AutoFlush)

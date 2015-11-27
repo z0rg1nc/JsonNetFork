@@ -33,9 +33,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
-using Newtonsoft.Json.Serialization;
+using BtmI2p.Newtonsoft.Json.Serialization;
 
-namespace Newtonsoft.Json.Utilities.LinqBridge
+namespace BtmI2p.Newtonsoft.Json.Utilities.LinqBridge
 {
   /// <summary>
   /// Provides a set of static (Shared in Visual Basic) methods for 
@@ -2973,7 +2973,7 @@ namespace Newtonsoft.Json.Utilities.LinqBridge
   }
 }
 
-namespace Newtonsoft.Json.Serialization
+namespace BtmI2p.Newtonsoft.Json.Serialization
 {
 #pragma warning disable 1591
   public delegate TResult Func<TResult>();
