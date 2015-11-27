@@ -66,7 +66,7 @@ namespace Newtonsoft.Json.Serialization
             _rootContract = (objectType != null) ? Serializer._contractResolver.ResolveContract(objectType) : null;
             _rootLevel = _serializeStack.Count + 1;
 
-            JsonContract contract = GetContractSafe(value);
+            JsonContract contract = GetContractSafe(value, objectType);
 
             try
             {
@@ -103,12 +103,13 @@ namespace Newtonsoft.Json.Serialization
             return _internalSerializer;
         }
 
-        private JsonContract GetContractSafe(object value)
+        private JsonContract GetContractSafe(object value, Type valueType = null)
         {
             if (value == null)
                 return null;
-
-            return Serializer._contractResolver.ResolveContract(value.GetType());
+            if (valueType == null || valueType == typeof(object))
+                valueType = value.GetType();
+            return Serializer._contractResolver.ResolveContract(valueType);
         }
 
         private void SerializePrimitive(JsonWriter writer, object value, JsonPrimitiveContract contract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerProperty)
@@ -461,7 +462,7 @@ namespace Newtonsoft.Json.Serialization
                     property.PropertyContract = Serializer._contractResolver.ResolveContract(property.PropertyType);
 
                 memberValue = property.ValueProvider.GetValue(value);
-                memberContract = (property.PropertyContract.IsSealed) ? property.PropertyContract : GetContractSafe(memberValue);
+                memberContract = (property.PropertyContract.IsSealed) ? property.PropertyContract : GetContractSafe(memberValue, property.PropertyType);
 
                 if (ShouldWriteProperty(memberValue, property))
                 {
@@ -590,7 +591,7 @@ namespace Newtonsoft.Json.Serialization
             {
                 try
                 {
-                    JsonContract valueContract = contract.FinalItemContract ?? GetContractSafe(value);
+                    JsonContract valueContract = contract.FinalItemContract ?? GetContractSafe(value, contract.CollectionItemType);
 
                     if (ShouldWriteReference(value, null, valueContract, contract, member))
                     {
@@ -667,7 +668,7 @@ namespace Newtonsoft.Json.Serialization
 
                     try
                     {
-                        JsonContract valueContract = contract.FinalItemContract ?? GetContractSafe(value);
+                        JsonContract valueContract = contract.FinalItemContract ?? GetContractSafe(value, contract.CollectionItemType);
 
                         if (ShouldWriteReference(value, null, valueContract, contract, member))
                         {
@@ -750,7 +751,7 @@ namespace Newtonsoft.Json.Serialization
 
             foreach (SerializationEntry serializationEntry in serializationInfo)
             {
-                JsonContract valueContract = GetContractSafe(serializationEntry.Value);
+                JsonContract valueContract = GetContractSafe(serializationEntry.Value, serializationEntry.ObjectType);
 
                 if (ShouldWriteReference(serializationEntry.Value, null, valueContract, contract, member))
                 {
@@ -924,7 +925,7 @@ namespace Newtonsoft.Json.Serialization
                 try
                 {
                     object value = entry.Value;
-                    JsonContract valueContract = contract.FinalItemContract ?? GetContractSafe(value);
+                    JsonContract valueContract = contract.FinalItemContract ?? GetContractSafe(value, contract.DictionaryValueType);
 
                     if (ShouldWriteReference(value, null, valueContract, contract, member))
                     {
